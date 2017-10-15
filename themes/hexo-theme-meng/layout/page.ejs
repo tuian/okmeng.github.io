@@ -1,0 +1,21 @@
+<span id='spancontent'>
+<h5>文章列表</h5>
+<% page.posts.each(function (post) { %>
+    <span><%- date(post.date, "YYYY-MM-DD") %></span>
+    <a href="javascript:void(0)" onclick="show('<%= url_for(post.path) %>')"><%= post.title %></a>
+    <br />
+<% }) %>
+<br />
+
+    <% if (page.prev || page.next){ %>
+      <% if (page.prev){ %>
+        <a href="javascript:void(0)" onclick="showPage('<%- url_for(page.prev_link) %>')">
+          <strong >上一页</strong>
+        </a>
+      <% } %>
+      <% if (page.next){ %>
+        <a href="javascript:void(0)" onclick="showPage('<%- url_for(page.next_link) %>')">
+          <strong>下一页</strong>
+      <% } %>
+    <% } %>
+</span>

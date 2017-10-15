@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <%- favicon_tag("icon/favicon.ico") %>
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+        <title>bigM</title>
+        <meta name="keywords" content="信息安全, 信息, 技术, Cyber Security" />
+        <meta name="description" content="最前沿的信息安全技术，最新的信息安全资讯，一手掌握。" />
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Google Web Font Embed -->
+        <!--         <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,500,300,700' rel='stylesheet' type='text/css'> -->
+
+        <%- css('css/fontRaleway.css') %>
+        <%- css('css/bootstrap.min.css') %>
+        <%- css('css/templatemo_main.css') %>
+        <%- css('css/animate.css') %>
+        <%- css('css/style.css') %>
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <!--[if lt IE 7]>
+                <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <![endif]-->
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 affix text-center" style="z-index: 1;padding: 0px;">
+            <div class="left-title">
+                <h1 class="templatemo-site-title">
+                    <a id='m' href="" >Mr.ZM</a>
+                </div>
+                <div id="magicword" class="wow">
+                    <span id="wow" class="color-text"></span>
+                </div>
+
+                <div class="right-menu">
+                <h1 class="templatemo-site-menu">
+                        <img src="images/btn-menu.png" alt="main menu" id="m-btn" class="pull-right visible-xs visible-sm" >
+                </h1>
+            </div>
+
+            <div>
+                <ul id="responsive" style="display: none" class="show-up hidden-lg hidden-md"></ul>
+                <!-- /.responsive -->
+            </div>
+        </div>
+
+        <div class="menu visible-md visible-lg">
+            <ul id="menu-list">
+                <li class="active home-menu"><a id="home" href="#home">Home</a></li>
+                <li class="about-menu"><a id="about" href="#about">About</a></li>
+                <li class="services-menu"><a id="blog" href="#services">Blog</a></li>
+                <li class="testimonial-menu"><a id="log" href="#testimonial">Log</a></li>
+                <li class="contact-menu"><a id="contact" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <!-- /.menu -->
+
+        <div class="image-section">
+            <div class="image-container">
+                <img src="images/bg1.jpg" id="home-img" class="main-img inactive" alt="Home">
+                <img src="images/bg2.jpg" id="about-img" class="inactive" alt="About">
+                <img src="images/bg3.jpg" id="services-img" class="inactive" alt="Services">
+                <img src="images/bg4.jpg" id="testimonial-img" class="inactive" alt="Testimonial">
+                <img src="images/bg5.jpg" id="contact-img" class="inactive" alt="Contact">
+            </div>
+        </div>
+        <div class="row">
+            <div id="meng" class="col-lg-11 col-md-11 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 templatemo-content-wrapper">
+                <div class="templatemo-content">
+
+                    <section id="home-text" class="active home-content-section">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <h2 style="color: pink;">Welcome to bigM</h2>
+                            <p style="color: pink;">欢迎</p>
+                            <p style="color: pink;">欢迎</p>
+                            <p style="color: pink;">热烈欢迎</p>
+                        </div>
+                    </section>
+                    <!-- /.home-text -->
+
+                    <section id="about-text" class="inactive">
+                        <h2>About</h2>
+                        <div class="col-sm-6 col-md-6">
+                            <p>信息安全工程师</p>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <p>信息安全技术</p>
+                        </div>
+                    </section>
+                    <!-- /.about-text -->
+
+                    <section id="services-text" class="inactive">
+                        <h2>我的项目</h2>
+                        <div class="col-sm-4 col-md-4">
+                            <h3>Web 开发</h3>
+                            <p>openssl 开发</p>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <h3>密码</h3>
+                            <p>密码学</p>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <h3>系统设计</h3>
+                            <p>BS架构<a class="nolink" href="#" target="_blank">系统</a>开发设计</p>
+                        </div>
+                    </section>
+                    <!-- /.services-text -->
+
+                    <section id="testimonial-text" class="inactive">
+                        <frame id='mainpage' height=100%, width=100%, name="blog">
+                            <div id="main-text" class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                <%- partial('page') %>
+                            </div>
+
+                            <div id="mside" class="col-lg-2 col-md-2 col-sm-0 col-xs-0 visible-lg visible-md">
+                                <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+                                    <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+                                        <% } %>
+                            </div>
+
+                        </frame>
+
+                    </section>
+                    <!-- /.testimonial-text -->
+
+
+                    <section id="contact-text" class="inactive">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <h2>欢迎联系我</h2></div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <p>欢迎联系我-亲爱的朋友,要注明一下哦！</p>
+                                    <div id="map-canvas">
+                                        <div style="float: left">
+                                            <img src="images/contact.jpg" alt="扫一扫加我微信：）" height="360" width="260">
+                                        </div>
+                                        <div style="float:right" width='300'>
+                                            <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=58e9y38pt7f&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
+                                            .........................................................................................................................................
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-6 col-md-6">
+                                    <form action="#" method="post">
+
+                                        <div class="form-group">
+                                            <!--<label for="contact_name">Name:</label>-->
+                                            <input type="text" id="contact_name" class="form-control" placeholder="Name" />
+                                        </div>
+                                        <div class="form-group">
+                                            <!--<label for="contact_email">Email:</label>-->
+                                            <input type="text" id="contact_email" class="form-control" placeholder="Email Address" />
+                                        </div>
+                                        <div class="form-group">
+                                            <!--<label for="contact_message">Message:</label>-->
+                                            <textarea id="contact_message" class="form-control" rows="9" placeholder="Write a message"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">发送</button>
+
+                                    </form>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /.contact-text -->
+                </div>
+                <!-- /.templatemo-content -->
+            </div>
+            <!-- /.templatemo-content-wrapper -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer">
+                <p class="footer-text">Copyright &copy; 2017 ZhaoMeng</p>
+            </div>
+            <!-- /.footer -->
+        </div>
+
+    </div>
+    <!-- /#main-wrapper -->
+
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- /#preloader -->
+
+    <%- js('js/jquery-3.2.0.min.js') %>
+    <%- js('js/jquery.backstretch.min.js') %>
+    <%- js('js/templatemo_script.js') %>
+    <%- js('js/jquery.textillate.js') %>
+    <%- js('js/jquery.lettering.js') %>
+    <%- js('js/jquery.goup.js') %>
+
+</body>
+
+</html>

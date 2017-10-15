@@ -1,0 +1,8 @@
+<meta charset="utf-8">
+<h5><%-page.category %></h5>
+<% page.posts.each(function(post, i){ %>
+
+    <div>
+      <a href="javascript:void(0)" onclick="show('<%= url_for(post.path) %>')"><%- post.title %> </a>
+    </div>
+<% }) %>

@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<div style="float:left">
+<article id="art">
+  <div>
+    <h2><%= page.title %></h2>
+  </div>
+   <div id='ls'>
+    <span><%- date(page.date, "YYYY-MM-DD") %></span>
+    <span>
+        <%- list_categories(page.categories,{
+          show_count: false,
+          class: 'article-category',
+          style: 'none',
+          separator: '❤'
+        }) %>
+    </span>
+    <span>
+        <%- list_tags(page.tags,{
+          show_count: false,
+          class: 'article-category',
+          style: 'none',
+          separator: '►'
+        }) %>
+    </span>
+  </div>
+  <div>
+    <%- page.content %>
+  </div>
+</article>
+</div>
+<script>
+    $("a", "#ls").click(function(){
+        // alert($(this).attr('href'));
+        var ur=$(this).attr('href');
+        // $(this).attr("href","javascript:void(0)");
+        html = $.ajax({url: ur, async:false});
+        $("#art").html(html.responseText);
+        // this.attr("href": '0');
+        return false;  // 不跳转
+    });
+</script>

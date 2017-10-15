@@ -1,0 +1,13 @@
+# Header
+menu:
+    Home: /
+    Archives: /Archives
+
+# Sidebar
+sidebar: right
+widgets:
+- category
+# - tag
+# - tagcloud
+- archive
+- recent_posts
